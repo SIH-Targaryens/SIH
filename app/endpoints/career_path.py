@@ -20,7 +20,6 @@ def get_next_steps(node, db):
             "average_salary": n.average_salary,
             "Entrance Exams": [r.strip() for r in n.key_recruiters.split(",")] if n.key_recruiters else [],
             "SubCategory": n.mobility_stats,
-            "next_steps": get_next_steps(n, db)
         }
         for n in next_nodes
     ]
