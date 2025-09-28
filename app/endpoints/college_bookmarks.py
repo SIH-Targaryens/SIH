@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
-from sqlalchemy.orm import Session
+from sqlalchemy import Column, String, Integer, ForeignKey, UniqueConstraint
+from sqlachemy.orm import Session
 from app.db import get_db
 from app.models.college_bookmark import CollegeBookmark
 from app.models.college import College  
